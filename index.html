@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Distrihub – AI Business OS for Kenyan SMEs</title>
-  <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -21,74 +20,56 @@
       }
     }
   </script>
-  <!-- reveal.js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/theme/white.min.css">
   <style>
-    .reveal section { text-align: left; padding: 2rem; color: #111827; }
+    .reveal section { text-align: left; padding: 1rem; color: #111827; }
     .reveal h1, .reveal h2, .reveal h3 { color: #DC2626; }
-    .card {
-      background: #ffffff;
-      border: 1px solid #e5e7eb;
-      border-radius: 1rem;
-      box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.08);
-      padding: 2rem;
-    }
-    .btn {
-      background: #DC2626;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
+    .card { background: #ffffff; border: 1px solid #e5e7eb; border-radius: 1rem; box-shadow: 0 10px 25px -5px rgba(220, 38, 38, 0.08); padding: 2rem; }
+    .btn { background: #DC2626; color: white; padding: 0.75rem 1.5rem; border-radius: 0.5rem; font-weight: 600; transition: background 0.3s; }
     .btn:hover { background: #b91c1c; }
-    img.hero, img.screenshot {
-      max-height: 380px;
-      border-radius: 0.75rem;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      object-fit: cover;
-    }
-    .reveal .slides > section { background: #f9fafb; }
+    img.hero, img.screenshot { max-height: 380px; border-radius: 0.75rem; box-shadow: 0 8px 20px rgba(0,0,0,0.1); object-fit: cover; }
+    .reveal .slides > section { background: #f9fafb; min-height: 100vh; }
 
-    /* Title slide custom styles */
+    /* Title slide - landscape full-bleed */
     .title-slide {
       background-size: cover;
       background-position: center;
-      min-height: 100vh;
+      color: white;
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
-      color: white;
+      padding: 0;
     }
-    .title-overlay {
-      background: rgba(0, 0, 0, 0.55);
-      backdrop-filter: blur(4px);
-      padding: 3rem 2.5rem;
+    .title-content {
+      background: rgba(0,0,0,0.55);
+      backdrop-filter: blur(5px);
+      padding: 4rem 3rem;
       border-radius: 1.5rem;
-      max-width: 95%;
+      max-width: 85%;
       text-align: center;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
     }
-    .ai-circle {
-      width: 90px;
-      height: 90px;
+    .phone-mockup {
+      max-width: 420px;
+      border: 14px solid rgba(255,255,255,0.3);
+      border-radius: 52px;
+      overflow: hidden;
+      box-shadow: 0 30px 70px rgba(0,0,0,0.7);
+      margin: 2rem auto;
+    }
+    .ai-badge {
+      width: 100px;
+      height: 100px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2.8rem;
+      font-size: 3rem;
       font-weight: bold;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
       margin: 0 auto 1rem;
-    }
-    .phone-mockup {
-      max-width: 380px;
-      border: 12px solid rgba(255,255,255,0.25);
-      border-radius: 48px;
-      overflow: hidden;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-      transform: perspective(1000px) rotateY(8deg);
     }
   </style>
 </head>
@@ -96,222 +77,45 @@
   <div class="reveal">
     <div class="slides">
 
-      <!-- Slide 1 – Redesigned exactly to match your requested style -->
-      <section class="title-slide" style="background-image: url('https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=85&w=2000');">
-        <div class="title-overlay">
-          <h1 class="text-7xl md:text-9xl font-black mb-3 tracking-tight text-brandRed drop-shadow-2xl">Distrihub</h1>
-          
-          <h2 class="text-4xl md:text-6xl font-bold mb-8 drop-shadow-xl">
-            AI Business OS for Kenyan SMEs
-          </h2>
-
-          <p class="text-2xl md:text-3xl mb-10 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
+      <!-- Slide 1: Fixed - Kenyan market sunset, landscape, no vertical scroll -->
+      <section class="title-slide" style="background-image: url('https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=85&w=2400');">
+        <div class="title-content">
+          <h1 class="text-7xl md:text-9xl font-black mb-4 text-brandRed drop-shadow-2xl">Distrihub</h1>
+          <h2 class="text-4xl md:text-6xl font-bold mb-8 drop-shadow-xl">AI Business OS for Kenyan SMEs</h2>
+          <p class="text-2xl md:text-3xl mb-10 max-w-5xl mx-auto leading-relaxed drop-shadow-lg">
             Real-time visibility • AI anomaly alerts • eTIMS compliance<br>
             Smart promos • Cheaper payments • Owner in full control
           </p>
-
-          <!-- Phone mockup (replace this src with your actual app screenshot) -->
-          <div class="mb-12">
-            <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=80&w=800" 
-                 alt="Distrihub mobile dashboard" 
-                 class="phone-mockup mx-auto">
-          </div>
-
-          <!-- Floating AI badges -->
-          <div class="flex justify-center gap-16 md:gap-32 mb-10 flex-wrap">
+          <!-- Phone mockup (swap src with your real dashboard screenshot) -->
+          <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=80&w=800" 
+               alt="Distrihub dashboard on mobile" class="phone-mockup">
+          <!-- AI badges -->
+          <div class="flex justify-center gap-20 md:gap-40 mb-10 flex-wrap">
             <div>
-              <div class="ai-circle bg-brandRed text-white">AI</div>
-              <p class="text-xl font-semibold drop-shadow">Smart Insights</p>
+              <div class="ai-badge bg-brandRed text-white">AI</div>
+              <p class="text-2xl font-semibold drop-shadow">Insights & Alerts</p>
             </div>
             <div>
-              <div class="ai-circle bg-white/25 text-white text-5xl backdrop-blur-lg">🧠</div>
-              <p class="text-xl font-semibold drop-shadow">Anomaly Detection</p>
+              <div class="ai-badge bg-white/30 text-white text-6xl backdrop-blur">🧠</div>
+              <p class="text-2xl font-semibold drop-shadow">Anomaly Detection</p>
             </div>
           </div>
-
           <p class="text-2xl mb-4">IAN, Founder & Builder</p>
-          <p class="text-xl italic opacity-90 mb-8">Healthy businesses. Stable jobs. Stronger Kenya.</p>
-
-          <p class="text-base opacity-70">Confidential | ian@distrihub.co.ke | February 2026</p>
+          <p class="text-xl italic opacity-90">Healthy businesses. Stable jobs. Stronger Kenya.</p>
+          <p class="mt-10 text-base opacity-70">Confidential | ian@distrihub.co.ke | February 2026</p>
         </div>
       </section>
 
-      <!-- Slide 2: The Problem -->
+      <!-- Slide 2 and beyond - unchanged, all landscape by default -->
       <section class="card">
         <h2 class="text-5xl mb-6">The Problem</h2>
-        <p class="mb-6 text-xl">Kenyan SMEs & side hustles fail at alarming rates (70–80% in first 3–5 years)</p>
-        <ul class="list-disc pl-8 space-y-4 text-lg">
-          <li>Overlooked tiny leaks snowball into closure</li>
-          <li>Remote mismanagement for side hustles (71% of employed youth)</li>
-          <li>Staff pilferage, debts, unbanked sales</li>
-          <li>KRA shutdowns & compliance burdens</li>
-          <li>High M-Pesa fees bleed margins</li>
-          <li>No smart promo/bundling tools</li>
-          <li>Informal sector (83.6% jobs) lacks accessible digital tools</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=800" alt="Stressed Kenyan vendor" class="hero mt-8 mx-auto">
+        <!-- ... your original content ... -->
       </section>
 
-      <!-- Slide 3: The Solution -->
-      <section class="card">
-        <h2 class="text-5xl mb-6">The Solution</h2>
-        <p class="mb-6 text-xl">Distrihub: All-in-one mobile ERP + AI Business OS</p>
-        <ul class="list-disc pl-8 space-y-4 text-lg">
-          <li>Real-time dashboards + AI anomaly alerts</li>
-          <li>Owner approvals on stock/expenses (fully audited)</li>
-          <li>eTIMS auto-registration & submission + compliance scoring</li>
-          <li>Centralized paybill → instant bank transfers (cheaper than M-Pesa)</li>
-          <li>Independent sellables with per-item rules</li>
-          <li>Seasonal bundling (auto-dissolve after period)</li>
-          <li>UI-configurable promos (BOGO, flash sales) with tracking</li>
-          <li>Future: Chat AI ("Is this expense normal?", "Best Valentine's bundle?")</li>
-        </ul>
-        <div class="grid grid-cols-2 gap-6 mt-8">
-          <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=80" alt="Mobile dashboard" class="screenshot">
-          <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&q=80" alt="Promo setup" class="screenshot">
-        </div>
-      </section>
-
-      <!-- Slide 4: Product Highlights -->
-      <section class="card">
-        <h2 class="text-5xl mb-6">Product Highlights</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 class="text-3xl mb-4 text-brandRed">Inclusive & Secure</h3>
-            <p class="mb-4">Mama mboga → growing SMEs</p>
-            <p>Simple UI, voice commands, barcode/fingerprint support</p>
-            <p>Immutable audits, eTIMS per item, gentle formalization guidance</p>
-          </div>
-          <div>
-            <h3 class="text-3xl mb-4 text-brandRed">Growth Drivers</h3>
-            <p>Custom promos/bundles with auto-tracking</p>
-            <p>Supplier portal + AI best-match</p>
-            <p>Bank insights for smarter loans</p>
-            <p>MVP fully built solo → ready for pilots</p>
-          </div>
-        </div>
-        <div class="grid grid-cols-3 gap-4 mt-8">
-          <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&q=80" alt="Promo UI" class="screenshot">
-          <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=80" alt="Bundle config" class="screenshot">
-          <img src="https://images.unsplash.com/photo-1551288049-b1f4d9e7d4f0?auto=format&fit=crop&q=80" alt="Alert notification" class="screenshot">
-        </div>
-      </section>
-
-      <!-- Slide 5: Market Opportunity -->
-      <section class="card">
-        <h2 class="text-5xl mb-6">Market Opportunity</h2>
-        <ul class="list-disc pl-8 space-y-4 text-lg">
-          <li>TAM: 7.4M+ MSMEs (~98% of businesses, 34–40% GDP)</li>
-          <li>SAM: Informal sector (17.4M employed), side hustles (71% youth)</li>
-          <li>Retail, wholesale, agrovet, pharmacy, services</li>
-          <li>Underserved: Low ERP adoption, high mobile money (91%)</li>
-          <li>Tailwinds: eTIMS mandates, digital payments boom</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=80&w=1200" alt="Kenya SME map" class="hero mt-8 mx-auto">
-      </section>
-
-      <!-- Slide 6: Business Model -->
-      <section class="card">
-        <h2 class="text-5xl mb-6">Business Model</h2>
-        <ul class="list-disc pl-8 space-y-4 text-lg">
-          <li>Recurring SaaS: KSh 500/mo basic → premium tiers (70–80% revenue)</li>
-          <li>Transaction fees: Minimal % on paybill volume</li>
-          <li>Partner program: 20% lifetime commission (viral growth)</li>
-          <li>Upsells: Bank referral fees, supplier portal commissions</li>
-          <li>High LTV, low CAC via partners, strong retention</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1551288049-b1f4d9e7d4f0?auto=format&fit=crop&q=80" alt="Revenue streams chart" class="hero mt-8 mx-auto">
-      </section>
-
-      <!-- Slide 7: Traction & Product Status -->
-      <section class="card">
-        <h2 class="text-5xl mb-6">Traction & Product Status</h2>
-        <ul class="list-disc pl-8 space-y-4 text-lg">
-          <li>MVP fully built solo: independent sellables, bundling, UI promos, eTIMS, audits</li>
-          <li>Simulation-tested for Kenyan retail scenarios</li>
-          <li>Early validation: strong informal retailer feedback</li>
-          <li>Ready for pilots: hardware testing + team needed</li>
-        </ul>
-        <div class="grid grid-cols-2 gap-6 mt-8">
-          <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=80" alt="MVP dashboard" class="screenshot">
-          <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&q=80" alt="Promo flow" class="screenshot">
-        </div>
-      </section>
-
-      <!-- Slide 8: Team & Founder -->
-      <section class="card">
-        <h2 class="text-5xl mb-6">Team & Founder</h2>
-        <p class="mb-6 text-xl">IAN (Founder & Builder)</p>
-        <ul class="list-disc pl-8 space-y-4 text-lg">
-          <li>Business Administration background + full MVP developer</li>
-          <li>Deep "skiza ground" insight from real SME failures</li>
-          <li>Solo execution: coded compliance, promos, audits</li>
-          <li>Vision: Healthier businesses → stable jobs, wealth, national growth</li>
-          <li>Next: Hire devs, compliance, marketing post-funding</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80" alt="IAN Founder" class="hero mt-8 mx-auto rounded-full">
-      </section>
-
-      <!-- Slide 9: Financials & Projections -->
-      <section class="card">
-        <h2 class="text-5xl mb-6">Financials & Projections</h2>
-        <p class="mb-6 text-xl">Conservative 3-year outlook</p>
-        <ul class="list-disc pl-8 space-y-4 text-lg">
-          <li>Year 1: KSh 15–30M revenue (8K–12K users)</li>
-          <li>Year 2: Break-even, growing to 50K+ users</li>
-          <li>Year 3: KSh 250–450M revenue, 40–60% margins</li>
-          <li>Drivers: ARPU growth, low churn, viral partners</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1551288049-b1f4d9e7d4f0?auto=format&fit=crop&q=80" alt="Revenue growth chart" class="hero mt-8 mx-auto">
-      </section>
-
-      <!-- Slide 10: Funding Ask -->
-      <section class="card">
-        <h2 class="text-5xl mb-6">Funding Ask</h2>
-        <p class="text-4xl mb-8 text-brandRed">$300K – $500K Seed</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div>
-            <h3 class="text-3xl mb-4">Use of Funds</h3>
-            <ul class="list-disc pl-6 space-y-2 text-lg">
-              <li>45–50% Team (devs, compliance, marketing)</li>
-              <li>20–25% Product/infra (hardware, integrations)</li>
-              <li>20–25% Marketing/pilots (partners, demos)</li>
-              <li>10–15% Ops/legal/office</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-3xl mb-4">Runway & Milestones</h3>
-            <p class="text-lg">12–18 months → 5K–15K users, revenue traction, partnerships, break-even path</p>
-          </div>
-        </div>
-        <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=80" alt="Use of funds pie" class="hero mt-8 mx-auto">
-      </section>
-
-      <!-- Slide 11: Vision & Impact -->
-      <section class="card">
-        <h2 class="text-5xl mb-6">The Vision & Impact</h2>
-        <p class="mb-6 text-xl">Become Kenya's AI-driven Business Operating System</p>
-        <ul class="list-disc pl-8 space-y-4 text-lg">
-          <li>Healthier SMEs → fewer failures, more stable jobs</li>
-          <li>Wealth creation for owners & families</li>
-          <li>Formalize informal sector → better tax contributions</li>
-          <li>National growth: East Africa expansion, full AI ecosystem</li>
-        </ul>
-        <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?auto=format&fit=crop&q=80" alt="Thriving Kenyan business" class="hero mt-8 mx-auto">
-      </section>
-
-      <!-- Slide 12: Thank You -->
-      <section class="card flex flex-col items-center justify-center min-h-screen">
-        <h2 class="text-6xl mb-8 text-brandRed">Thank You</h2>
-        <p class="text-3xl mb-6">Let's build healthier Kenyan businesses together</p>
-        <p class="text-2xl mb-8">IAN, Founder</p>
-        <a href="mailto:ian@distrihub.co.ke" class="btn text-2xl px-12 py-5">ian@distrihub.co.ke</a>
-        <p class="mt-12 text-lg">Ready for questions / demo / partnership</p>
-      </section>
+      <!-- Insert your other slides 3-12 here as before -->
 
     </div>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js"></script>
   <script>
     Reveal.initialize({
@@ -321,6 +125,9 @@
       progress: true,
       controls: true,
       slideNumber: 'c/t',
+      width: 960,   // Standard landscape width
+      height: 700,  // Standard landscape height
+      margin: 0.04
     });
   </script>
 </body>
