@@ -4,7 +4,6 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Distrihub – AI Business OS for Kenyan SMEs</title>
-
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -22,11 +21,9 @@
       }
     }
   </script>
-
   <!-- reveal.js - white theme to match app's light mode -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/theme/white.min.css">
-
   <style>
     .reveal section { text-align: left; padding: 2rem; color: #111827; }
     .reveal h1, .reveal h2, .reveal h3 { color: #DC2626; }
@@ -61,24 +58,27 @@
       object-fit: cover;
     }
     .reveal .slides > section { background: #f9fafb; }
+    /* Slight tweak for title slide hero to feel more immersive */
+    .hero-title { max-height: 420px; }
   </style>
 </head>
 <body class="bg-gray-50">
-
   <div class="reveal">
     <div class="slides">
-
-      <!-- Slide 1: Title / Cover -->
+      <!-- Slide 1: Title / Cover – Updated hero image for Kenyan relevance -->
       <section class="flex flex-col items-center justify-center min-h-screen card">
-        <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=80&w=800" alt="Distrihub Hero" class="hero mb-8">
-        <h1 class="text-6xl font-bold mb-4">Distrihub</h1>
-        <h2 class="text-4xl mb-6">Complete Business Manager & AI Operating System for Kenyan SMEs</h2>
-        <p class="text-2xl mb-4 text-center max-w-4xl">Putting every business "in the owner's hands" — real-time visibility, anomaly alerts, compliance, smart promos & growth tools</p>
+        <img src="https://thumbs.dreamstime.com/b/vendors-shoppers-street-market-accra-ghana-closer-view-busy-women-wearing-woven-hats-sell-goods-under-colorful-407129388.jpg" 
+             alt="Vibrant Kenyan-style market traders using mobile in busy informal economy" 
+             class="hero hero-title mb-8">
+        <h1 class="text-6xl font-bold mb-4 text-center">Distrihub</h1>
+        <h2 class="text-4xl mb-6 text-center">AI-Powered Business OS for Kenyan SMEs & Side Hustles</h2>
+        <p class="text-2xl mb-4 text-center max-w-4xl">Real-time control in the owner's hands: dashboards, AI alerts, eTIMS compliance, smart promos, cheaper payments — built for mama mboga to growing dukas</p>
         <p class="text-xl mb-8">IAN, Founder & Builder</p>
         <p class="text-lg italic">Healthy businesses. Stable jobs. Stronger Kenya.</p>
         <p class="mt-12 text-sm opacity-70">Confidential | ian@distrihub.co.ke | February 2026</p>
       </section>
 
+      <!-- The rest of your slides remain unchanged -->
       <!-- Slide 2: The Problem -->
       <section class="card">
         <h2 class="text-5xl mb-6">The Problem</h2>
@@ -252,10 +252,8 @@
         <a href="mailto:ian@distrihub.co.ke" class="btn text-2xl px-12 py-5">ian@distrihub.co.ke</a>
         <p class="mt-12 text-lg">Ready for questions / demo / partnership</p>
       </section>
-
     </div>
   </div>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js"></script>
   <script>
     Reveal.initialize({
