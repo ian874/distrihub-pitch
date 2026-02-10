@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Distrihub Pitch – AI Business OS for Kenyan SMEs</title>
+
+  <!-- Tailwind v4 Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#00d4ff',     // Cyan accent
+            accent: '#00ff9d',      // Green for highlights
+            dark: '#0a192f',        // Deep bg
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- reveal.js CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/theme/black.min.css">
+
+  <!-- shadcn-inspired custom styles -->
+  <style>
+    .reveal section { text-align: left; padding: 2rem; }
+    .reveal h1, .reveal h2, .reveal h3 { color: #00d4ff; }
+    .card {
+      background: rgba(10, 25, 47, 0.8);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(100, 116, 139, 0.5);
+      border-radius: 1rem;
+      box-shadow: 0 10px 30px -15px rgba(0, 212, 255, 0.2);
+      padding: 2rem;
+      color: #e2e8f0;
+    }
+    .badge {
+      background: rgba(0, 255, 157, 0.15);
+      color: #00ff9d;
+      border: 1px solid rgba(0, 255, 157, 0.3);
+      padding: 0.4rem 0.8rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+    }
+    .btn {
+      background: #00d4ff;
+      color: #0a192f;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    .btn:hover { background: #00b8e0; }
+    .reveal .slides > section { background: #000; }
+  </style>
+</head>
+<body class="bg-black text-gray-200">
+
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Title Slide -->
+      <section class="flex flex-col items-center justify-center min-h-screen">
+        <h1 class="text-6xl font-bold mb-4">Distrihub</h1>
+        <h2 class="text-4xl text-primary mb-6">AI-Driven Business OS for Kenyan SMEs</h2>
+        <p class="text-2xl opacity-90 mb-8">Urban Efficiency + Rural Digitization</p>
+        <p class="text-xl">IAN, Founder | Nairobi, February 2026</p>
+      </section>
+
+      <!-- Executive Summary / Vision Intro -->
+      <section class="card">
+        <h2 class="text-4xl mb-6">What is Distrihub?</h2>
+        <p class="mb-6 text-lg">Distrihub is a comprehensive, all-in-one ERP system designed as a complete business manager for SMEs in Kenya and East Africa. It empowers owners to run operations efficiently from anywhere, with AI-driven insights and controls that put the business "in their hands" via a mobile-first app.</p>
+        <p class="italic opacity-80 mb-6">Distrihub evolves into an AI-driven Business OS where owners chat with their business for advice on routes, budgets, promotions, and more—formalizing informal flows to build health and prosperity.</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="badge">Mobile-First</span>
+          <span class="badge">AI Insights</span>
+          <span class="badge">eTIMS Ready</span>
+          <span class="badge">KSh 500/mo</span>
+        </div>
+      </section>
+
+      <!-- Key Features - Business/Staff/Stock (grid for readability) -->
+      <section class="card">
+        <h2 class="text-4xl mb-6">Expanded Key Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl text-primary mb-3">Business Management</h3>
+            <p>Real-time dashboards for operations, expense tracking (fixed/recurrent), AI flags anomalies (e.g., unusual spending indicating exploitation or false entries), cost optimization advice.</p>
+          </div>
+          <div>
+            <h3 class="text-2xl text-primary mb-3">Staff Management</h3>
+            <p>Tracks disciplinary actions, debts (persistent after transfers), advances, salaries. Staff personal accounts for real-time updates. System locks on discrepancies (unpaid debts/unbanked sales), instant owner notifications → reduces risks, promotes accountability.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div>
+            <h3 class="text-2xl text-primary mb-3">Stock Management</h3>
+            <p>Strict controls: stock moves only after owner approval (app, audited). Opening balances/direct sales bypass for efficiency. Low-stock alerts, restock requests, POs/GRNs to formalize informal flows (WhatsApp POs to street suppliers or internal save).</p>
+          </div>
+          <div>
+            <h3 class="text-2xl text-primary mb-3">POS/Sales & AI</h3>
+            <p>Seamless transactions, real-time reporting, AI route optimization (traffic/weather/sales history), returns. Predictive AI: budgeting, marketing timing, promotions, chat queries ("Is this expense normal?", "Who to promote?").</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3 class="text-2xl text-primary mb-3">Supplier, Fleet, Compliance & Payments</h3>
+        <ul class="list-disc pl-6 space-y-3 text-sm">
+          <li>Supplier pool (Distrihub clients) with portal, AI best-match (distance, cost, reviews).</li>
+          <li>Fleet/Asset: QR codes, depreciation, accounting integration.</li>
+          <li>Compliance: eTIMS auto-registration/submission, statutory reminders, industry-specific scoring, guides unregistered to formalization (nation-building via taxes).</li>
+          <li>Payments: Centralized paybill + instant Daraja API bank transfers (slashes M-Pesa fees, minimal Distrihub charge, reduces cash risks).</li>
+          <li>Bank Partnerships: Secure insights for smarter loans, real-time monitoring, lower defaults, referral revenue.</li>
+          <li>Perks: Loyalty, notifications, webhooks, cheap plans from KSh 500/mo for mama mboga/side hustlers.</li>
+        </ul>
+      </section>
+
+      <!-- Core Problem -->
+      <section class="card">
+        <h2 class="text-4xl mb-6">The Core Problem Distrihub Solves</h2>
+        <ul class="list-disc pl-6 space-y-4">
+          <li><strong>Lack of Oversight</strong>: Tiny losses snowball; approvals, audits, AI flags prevent it.</li>
+          <li><strong>Remote Side Hustles</strong>: 71% employed Kenyans run side businesses (often fail from mismanagement); real-time views/locks help.</li>
+          <li><strong>Staff Pilferage/Risks</strong>: Theft/debts cause closures; tracking + locks address head-on.</li>
+          <li><strong>Regulatory Burdens</strong>: KRA shutdowns common; auto-submissions + scoring guide compliance/formalization.</li>
+          <li><strong>High Costs & Inefficiencies</strong>: Transaction fees bleed margins; centralized paybill saves. Asset/expense gaps; QR + AI plug them. Loan barriers; partnerships provide data. Supplier chaos; pooled portals + AI streamline. Informal gaps; gentle POs/GRNs add structure.</li>
+        </ul>
+        <p class="mt-6 italic opacity-80">Solving these fosters stable jobs, wealth, economic growth—boosting tax contributions and nation-building.</p>
+      </section>
+
+      <!-- Target & Vision -->
+      <section class="card">
+        <h2 class="text-4xl mb-6">Target Users, Market & Vision</h2>
+        <p class="mb-4">"Skiza ground": Tailored for real Kenyans—WhatsApp POs for informal suppliers, cheap plans for low-income, compliance scoring to formalize without overwhelm. Serves all sectors, formal/informal, registered/unregistered.</p>
+        <p class="mb-6">Short-Term: Launch, onboard, integrate banks/suppliers. Medium: Full AI OS, East Africa expansion. Long-Term: AI ecosystem for prosperity, stable employment (tackling 39% unemployment), national impact via formalized businesses/taxes.</p>
+        <div class="flex flex-wrap gap-3">
+          <span class="badge">All Sectors</span>
+          <span class="badge">Urban + Rural</span>
+          <span class="badge">Nation-Building</span>
+        </div>
+      </section>
+
+      <!-- Funding / Contact -->
+      <section class="card flex flex-col items-center justify-center min-h-screen">
+        <h2 class="text-5xl mb-8">Let's Build Kenya's Future</h2>
+        <p class="text-2xl mb-6">Funding Ask: $300K–$500K Seed</p>
+        <p class="text-xl mb-8">Reach out to discuss → ian@distrihub.co.ke</p>
+        <a href="mailto:ian@distrihub.co.ke" class="btn text-xl px-10 py-4">Get in Touch</a>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'slide',
+      backgroundTransition: 'fade',
+      progress: true,
+      controls: true,
+      slideNumber: 'c/t',
+      width: 960,
+      height: 700,
+      margin: 0.1,
+    });
+  </script>
+</body>
+</html>
