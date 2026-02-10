@@ -21,7 +21,7 @@
       }
     }
   </script>
-  <!-- reveal.js - white theme to match app's light mode -->
+  <!-- reveal.js -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/theme/white.min.css">
   <style>
@@ -43,14 +43,6 @@
       transition: background 0.3s;
     }
     .btn:hover { background: #b91c1c; }
-    .badge {
-      background: #fee2e2;
-      color: #DC2626;
-      border: 1px solid #fecaca;
-      padding: 0.35rem 0.75rem;
-      border-radius: 9999px;
-      font-size: 0.875rem;
-    }
     img.hero, img.screenshot {
       max-height: 380px;
       border-radius: 0.75rem;
@@ -58,27 +50,92 @@
       object-fit: cover;
     }
     .reveal .slides > section { background: #f9fafb; }
-    /* Slight tweak for title slide hero to feel more immersive */
-    .hero-title { max-height: 420px; }
+
+    /* Title slide custom styles */
+    .title-slide {
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: white;
+    }
+    .title-overlay {
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+      padding: 3rem 2.5rem;
+      border-radius: 1.5rem;
+      max-width: 95%;
+      text-align: center;
+    }
+    .ai-circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      font-weight: bold;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+      margin: 0 auto 1rem;
+    }
+    .phone-mockup {
+      max-width: 380px;
+      border: 12px solid rgba(255,255,255,0.25);
+      border-radius: 48px;
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+      transform: perspective(1000px) rotateY(8deg);
+    }
   </style>
 </head>
 <body class="bg-gray-50">
   <div class="reveal">
     <div class="slides">
-      <!-- Slide 1: Title / Cover – Updated hero image for Kenyan relevance -->
-      <section class="flex flex-col items-center justify-center min-h-screen card">
-        <img src="https://thumbs.dreamstime.com/b/vendors-shoppers-street-market-accra-ghana-closer-view-busy-women-wearing-woven-hats-sell-goods-under-colorful-407129388.jpg" 
-             alt="Vibrant Kenyan-style market traders using mobile in busy informal economy" 
-             class="hero hero-title mb-8">
-        <h1 class="text-6xl font-bold mb-4 text-center">Distrihub</h1>
-        <h2 class="text-4xl mb-6 text-center">AI-Powered Business OS for Kenyan SMEs & Side Hustles</h2>
-        <p class="text-2xl mb-4 text-center max-w-4xl">Real-time control in the owner's hands: dashboards, AI alerts, eTIMS compliance, smart promos, cheaper payments — built for mama mboga to growing dukas</p>
-        <p class="text-xl mb-8">IAN, Founder & Builder</p>
-        <p class="text-lg italic">Healthy businesses. Stable jobs. Stronger Kenya.</p>
-        <p class="mt-12 text-sm opacity-70">Confidential | ian@distrihub.co.ke | February 2026</p>
+
+      <!-- Slide 1 – Redesigned exactly to match your requested style -->
+      <section class="title-slide" style="background-image: url('https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?auto=format&fit=crop&q=85&w=2000');">
+        <div class="title-overlay">
+          <h1 class="text-7xl md:text-9xl font-black mb-3 tracking-tight text-brandRed drop-shadow-2xl">Distrihub</h1>
+          
+          <h2 class="text-4xl md:text-6xl font-bold mb-8 drop-shadow-xl">
+            AI Business OS for Kenyan SMEs
+          </h2>
+
+          <p class="text-2xl md:text-3xl mb-10 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
+            Real-time visibility • AI anomaly alerts • eTIMS compliance<br>
+            Smart promos • Cheaper payments • Owner in full control
+          </p>
+
+          <!-- Phone mockup (replace this src with your actual app screenshot) -->
+          <div class="mb-12">
+            <img src="https://images.unsplash.com/photo-1556740714-a8395b3a74dd?auto=format&fit=crop&q=80&w=800" 
+                 alt="Distrihub mobile dashboard" 
+                 class="phone-mockup mx-auto">
+          </div>
+
+          <!-- Floating AI badges -->
+          <div class="flex justify-center gap-16 md:gap-32 mb-10 flex-wrap">
+            <div>
+              <div class="ai-circle bg-brandRed text-white">AI</div>
+              <p class="text-xl font-semibold drop-shadow">Smart Insights</p>
+            </div>
+            <div>
+              <div class="ai-circle bg-white/25 text-white text-5xl backdrop-blur-lg">🧠</div>
+              <p class="text-xl font-semibold drop-shadow">Anomaly Detection</p>
+            </div>
+          </div>
+
+          <p class="text-2xl mb-4">IAN, Founder & Builder</p>
+          <p class="text-xl italic opacity-90 mb-8">Healthy businesses. Stable jobs. Stronger Kenya.</p>
+
+          <p class="text-base opacity-70">Confidential | ian@distrihub.co.ke | February 2026</p>
+        </div>
       </section>
 
-      <!-- The rest of your slides remain unchanged -->
       <!-- Slide 2: The Problem -->
       <section class="card">
         <h2 class="text-5xl mb-6">The Problem</h2>
@@ -192,7 +249,6 @@
           <li>Vision: Healthier businesses → stable jobs, wealth, national growth</li>
           <li>Next: Hire devs, compliance, marketing post-funding</li>
         </ul>
-        <!-- Add your photo here -->
         <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&q=80" alt="IAN Founder" class="hero mt-8 mx-auto rounded-full">
       </section>
 
@@ -252,8 +308,10 @@
         <a href="mailto:ian@distrihub.co.ke" class="btn text-2xl px-12 py-5">ian@distrihub.co.ke</a>
         <p class="mt-12 text-lg">Ready for questions / demo / partnership</p>
       </section>
+
     </div>
   </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.2.1/reveal.min.js"></script>
   <script>
     Reveal.initialize({
